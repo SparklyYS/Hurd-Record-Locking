@@ -432,7 +432,7 @@ rootdir_gc_slabinfo (void *hook, char **contents, ssize_t *contents_len)
   if (err)
     return err;
 
-  m = open_memstream (contents, contents_len);
+  m = open_memstream (contents, (size_t *)contents_len);
   if (m == NULL)
     {
       err = ENOMEM;
@@ -449,9 +449,11 @@ rootdir_gc_slabinfo (void *hook, char **contents, ssize_t *contents_len)
       mem_usage = (cache_info[i].nr_slabs * cache_info[i].slab_size)
 	>> 10;
       mem_total += mem_usage;
-      mem_reclaimable = (cache_info[i].flags & CACHE_FLAGS_NO_RECLAIM)
+	  mem_reclaimable =
+			  (cache_info[i].nr_free_slabs * cache_info[i].slab_size) >> 10;
+      /* mem_reclaimable = (cache_info[i].flags & CACHE_FLAGS_NO_RECLAIM) 
 	? 0 : (cache_info[i].nr_free_slabs
-	       * cache_info[i].slab_size) >> 10;
+	       * cache_info[i].slab_size) >> 10; */
       mem_total_reclaimable += mem_reclaimable;
       fprintf (m,
                "%-21s %04x %7zu %3zuk  %4lu %6lu %6lu %7zuk %10zuk\n",
@@ -468,7 +470,7 @@ rootdir_gc_slabinfo (void *hook, char **contents, ssize_t *contents_len)
 
  out:
   vm_deallocate (mach_task_self (),
-                 cache_info, cache_info_count * sizeof *cache_info);
+                 (vm_address_t)cache_info, cache_info_count * sizeof *cache_info);
   return err;
 }
 
@@ -481,7 +483,7 @@ rootdir_gc_filesystems (void *hook, char **contents, ssize_t *contents_len)
   glob_t matches;
   FILE *m;
 
-  m = open_memstream (contents, contents_len);
+  m = open_memstream (contents, (size_t *)contents_len);
   if (m == NULL)
     return errno;
 
@@ -574,7 +576,7 @@ rootdir_make_translated_node (void *dir_hook, const void *entry_hook)
       return np;
     }
 
-  np = procfs_make_node (entry_hook, entry_hook);
+  np = procfs_make_node (entry_hook,(void *)entry_hook);
   if (np == NULL)
     return NULL;
 
