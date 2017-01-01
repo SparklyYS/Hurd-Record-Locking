@@ -1,0 +1,57 @@
+2772f5c6a6a51cf946fd95bf6ffe254273157a21 is the last commit imported from CVS.
+All commits after that one have valid author and committer information.
+
+Use this to examine the change log for earlier changes:
+
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:auth/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:benchmarks/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:boot/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:config/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:console-client/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:console/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:daemons/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:defpager/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:doc/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:exec/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:ext2fs/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:fatfs/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:fstests/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:ftpfs/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:hostmux/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:hurd/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:include/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:init/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:isofs/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libcons/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libdirmgt/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libdiskfs/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libfshelp/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libftpconn/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libhurdbugaddr/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libihash/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libiohelp/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libnetfs/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libpager/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libpipe/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libports/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libps/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libshouldbeinlibc/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libstore/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libthreads/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:libtrivfs/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:login/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:mach-defpager/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:nfs/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:nfsd/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:pfinet/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:pflocal/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:proc/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:release/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:storeio/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:sutils/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:term/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:tmpfs/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:trans/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:usermux/ChangeLog
+    $ git show 2772f5c6a6a51cf946fd95bf6ffe254273157a21:utils/ChangeLog

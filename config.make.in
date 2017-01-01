@@ -1,0 +1,104 @@
+# @configure_input@
+
+package-version := @PACKAGE_VERSION@
+# What version of the Hurd is this?  For compatibility (libraries' SONAMEs),
+# hard-code this to 0.3 instead of coupling with PACKAGE_VERSION.
+hurd-version := 0.3
+
+# Machine architecture.
+machine = @host_cpu@
+asm_syntax = @asm_syntax@
+
+# Build options.
+build-profiled = @enable_profile@
+build-static = @enable_static_progs@
+boot-store-types = @boot_store_types@
+
+# Prefix prepended to names of machine-independent installed files.
+prefix = @prefix@
+# Prefix prepended to names of machine-dependent installed files.
+exec_prefix = @exec_prefix@
+
+# Directories where things get installed.
+hurddir = ${exec_prefix}/hurd
+libdir = @libdir@
+bindir = @bindir@
+sbindir = @sbindir@
+includedir = @includedir@
+libexecdir = @libexecdir@
+bootdir = ${exec_prefix}/boot
+infodir = @infodir@
+sysconfdir = @sysconfdir@
+localstatedir = @localstatedir@
+sharedstatedir = @sharedstatedir@
+datadir = @datadir@
+datarootdir = @datarootdir@
+
+# All of those directories together:
+installationdirlist = $(hurddir) $(libdir) $(bindir) $(sbindir) \
+	$(includedir) $(libexecdir) $(bootdir) $(infodir) $(sysconfdir) \
+	$(localstatedir) $(sharedstatedir)
+
+
+# How to run compilation tools.
+CC = @CC@
+CPP = $(CC) -E -x c # We need this option when input file names are not *.c.
+LD = @LD@
+OBJCOPY = @OBJCOPY@
+AR = @AR@
+RANLIB = @RANLIB@
+MIG = @MIG@
+MIGCOM = $(MIG) -cc cat - /dev/null
+AWK = @AWK@
+SED = @SED@
+LEX = @LEX@
+YACC = @YACC@
+
+# Compilation flags.  Append these to the definitions already made by
+# the specific Makefile.
+CPPFLAGS += @CPPFLAGS@ @DEFS@
+CFLAGS += @CFLAGS@
+LDFLAGS += @LDFLAGS@
+
+gnu89-inline-CFLAGS = @libc_cv_gnu89_inline@
+
+# `yes' or `no' to indicate if ld --version-script is available.
+VERSIONING = @VERSIONING@
+
+# How to link against Parted libraries, if at all.
+PARTED_LIBS = @PARTED_LIBS@
+
+# How to compile and link against ncursesw.
+LIBNCURSESW = @LIBNCURSESW@
+NCURSESW_INCLUDE = @NCURSESW_INCLUDE@
+
+# How to compile and link against X11.
+HAVE_X11 = @have_x11@
+X11_CFLAGS = @X11_CFLAGS@
+X11_LIBS = @X11_LIBS@
+XKB_BASE = @XKB_BASE@
+X11_KEYSYMDEF_H = @X11_KEYSYMDEF_H@
+
+# How to compile and link against libdaemon.
+HAVE_DAEMON = @HAVE_DAEMON@
+libdaemon_CFLAGS = @libdaemon_CFLAGS@
+libdaemon_LIBS = @libdaemon_LIBS@
+
+# How to compile and link against libbz2.
+HAVE_LIBBZ2 = @HAVE_LIBBZ2@
+
+# How to compile and link against libz.
+HAVE_LIBZ = @HAVE_LIBZ@
+
+# How to compile and link against libblkid.
+HAVE_BLKID = @HAVE_BLKID@
+libblkid_CFLAGS = @libblkid_CFLAGS@
+libblkid_LIBS = @libblkid_LIBS@
+
+# Whether Sun RPC support is available.
+HAVE_SUN_RPC = @HAVE_SUN_RPC@
+
+# Installation tools.
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@
+INSTALL_DATA = @INSTALL_DATA@
